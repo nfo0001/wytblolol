@@ -89,5 +89,27 @@ blur
 
 </section>
 
+    function playAudio() {
+      myAudio = new Audio('bbb.mp3'); 
+      if (typeof myAudio.loop == 'boolean')
+      {
+          myAudio.loop = true;
+      }
+      else
+      {
+          myAudio.addEventListener('ended', function() {
+              this.currentTime = 0;
+              this.play();
+          }, false);
+      }
+      myAudio.play();
+  
+  
+  
+  
+  
+  
+  
 </body>
 </html>
+
